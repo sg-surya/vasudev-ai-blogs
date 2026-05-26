@@ -44,72 +44,56 @@ export default function Article() {
         style={{ scaleX }} 
       />
       
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
+      <article className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
         <Link href="/articles" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-teal mb-8 transition-colors group">
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Back to Archive
         </Link>
 
-        {/* Header */}
-        <header className="mb-12">
-          <div className="flex flex-wrap items-center gap-3 mb-6">
-            <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase bg-teal text-white rounded-full shadow-sm">
-              {post.category}
-            </span>
-            {post.tags.map(tag => (
-              <span key={tag} className="px-3 py-1 text-xs font-mono tracking-tight bg-muted text-muted-foreground rounded border border-border">
-                #{tag}
-              </span>
-            ))}
-          </div>
-
-          <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight mb-8 leading-tight">
-            {post.title}
-          </h1>
-
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-6 border-y border-border">
-            <div className="flex items-center gap-4">
-              <img src={post.author.avatar} alt={post.author.name} className="w-12 h-12 rounded-full border border-border" />
-              <div>
-                <p className="font-semibold text-foreground">{post.author.name}</p>
-                <p className="text-sm text-teal">{post.author.role}</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <CalendarDays className="w-4 h-4" />
-                {format(new Date(post.date), 'MMM d, yyyy')}
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                {post.readingTime}
-              </div>
+        {/* Header - Author & Meta */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-4 border-y border-foreground/10 mb-10">
+          <div className="flex items-center gap-4">
+            <img src={post.author.avatar} alt={post.author.name} className="w-12 h-12 rounded-full border border-border" />
+            <div>
+              <p className="font-semibold text-foreground">{post.author.name}</p>
+              <p className="text-sm text-teal">{post.author.role}</p>
             </div>
           </div>
-        </header>
+
+          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <CalendarDays className="w-4 h-4" />
+              {format(new Date(post.date), 'MMM d, yyyy')}
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4" />
+              {post.readingTime}
+            </div>
+          </div>
+        </div>
 
         {/* Cover Image */}
-        <div className="aspect-[21/9] md:aspect-[24/9] w-full rounded-2xl md:rounded-3xl overflow-hidden mb-16 border border-border shadow-sm">
+        <div className="aspect-[21/9] md:aspect-[24/9] w-full rounded-2xl md:rounded-3xl overflow-hidden mb-16 border border-foreground/10 shadow-sm relative">
+          {/* A slight dark overlay isn't needed anymore as title is below, but let's keep the image clean */}
           <img src={post.coverImage} alt={post.title} className="w-full h-full object-cover" />
         </div>
 
         {/* Content & Actions Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_800px_1fr] gap-x-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_250px] gap-x-12 xl:gap-x-16">
           
           {/* Left Sidebar (Sticky social) - Hidden on small screens */}
-          <div className="hidden lg:block">
-            <div className="sticky top-32 flex flex-col items-end gap-4 px-4">
+          <div className="hidden lg:block w-16">
+            <div className="sticky top-32 flex flex-col items-center gap-4">
               <button 
                 onClick={handleCopyLink}
-                className="p-3 bg-card border border-border rounded-full hover:bg-muted hover:text-teal hover:border-teal/50 transition-all text-muted-foreground group relative"
+                className="p-3 bg-transparent border border-foreground/20 rounded-full hover:bg-muted hover:text-teal hover:border-teal/50 transition-all text-foreground group relative"
                 aria-label="Share article"
               >
                 <Share2 className="w-5 h-5" />
                 {copied && <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-foreground text-background text-xs px-2 py-1 rounded shadow-sm whitespace-nowrap">Link Copied!</span>}
               </button>
               <button 
-                className="p-3 bg-card border border-border rounded-full hover:bg-muted hover:text-teal hover:border-teal/50 transition-all text-muted-foreground"
+                className="p-3 bg-transparent border border-foreground/20 rounded-full hover:bg-muted hover:text-teal hover:border-teal/50 transition-all text-foreground"
                 aria-label="Bookmark article"
               >
                 <BookmarkPlus className="w-5 h-5" />
@@ -118,40 +102,59 @@ export default function Article() {
           </div>
 
           {/* Main Markdown Content */}
-          <div className="prose prose-lg dark:prose-invert prose-headings:font-serif prose-headings:tracking-tight prose-a:text-teal prose-a:decoration-teal/30 hover:prose-a:decoration-teal prose-img:rounded-2xl max-w-none">
-            <ReactMarkdown
-              components={{
-                code({node, inline, className, children, ...props}: any) {
-                  const match = /language-(\w+)/.exec(className || '')
-                  return !inline && match ? (
-                    <SyntaxHighlighter
-                      {...props}
-                      children={String(children).replace(/\n$/, '')}
-                      style={vscDarkPlus as any}
-                      language={match[1]}
-                      PreTag="div"
-                      className="rounded-xl border border-border !bg-[#12161E] my-8 !p-6 !text-sm"
-                    />
-                  ) : (
-                    <code {...props} className="bg-muted px-1.5 py-0.5 rounded-md font-mono text-sm text-teal before:content-none after:content-none">
-                      {children}
-                    </code>
-                  )
-                }
-              }}
-            >
-              {post.content}
-            </ReactMarkdown>
+          <div className="w-full min-w-0">
+            {/* Title moved here! */}
+            <div className="mb-10">
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase bg-teal text-white rounded-full shadow-sm">
+                  {post.category}
+                </span>
+                {post.tags.map(tag => (
+                  <span key={tag} className="px-3 py-1 text-xs font-mono tracking-tight bg-muted text-muted-foreground rounded border border-border hidden sm:inline-flex">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+              <h1 className="text-4xl md:text-[3.5rem] font-serif font-bold tracking-tight leading-[1.1]">
+                {post.title}
+              </h1>
+            </div>
+
+            <div className="prose prose-lg dark:prose-invert prose-headings:font-serif prose-headings:tracking-tight prose-a:text-teal prose-a:decoration-teal/30 hover:prose-a:decoration-teal prose-img:rounded-2xl max-w-none">
+              <ReactMarkdown
+                components={{
+                  code({node, inline, className, children, ...props}: any) {
+                    const match = /language-(\w+)/.exec(className || '')
+                    return !inline && match ? (
+                      <SyntaxHighlighter
+                        {...props}
+                        children={String(children).replace(/\n$/, '')}
+                        style={vscDarkPlus as any}
+                        language={match[1]}
+                        PreTag="div"
+                        className="rounded-xl border border-border !bg-[#12161E] my-8 !p-6 !text-sm"
+                      />
+                    ) : (
+                      <code {...props} className="bg-muted px-1.5 py-0.5 rounded-md font-mono text-sm text-teal before:content-none after:content-none">
+                        {children}
+                      </code>
+                    )
+                  }
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
+            </div>
           </div>
 
           {/* Right Sidebar (Empty for balance, or could be TOC) */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block w-[250px]">
              <div className="sticky top-32">
-                <h4 className="font-serif font-bold text-sm tracking-wider uppercase text-muted-foreground mb-4">On this page</h4>
-                <div className="text-sm space-y-3 text-muted-foreground">
-                  <p className="hover:text-teal cursor-pointer transition-colors">The Cognitive Engine</p>
-                  <p className="hover:text-teal cursor-pointer transition-colors pl-4">1. Memory and State</p>
-                  <p className="hover:text-teal cursor-pointer transition-colors pl-4">2. Tool Usage</p>
+                <h4 className="font-serif font-bold tracking-wider uppercase text-foreground mb-6">ON THIS PAGE</h4>
+                <div className="text-sm space-y-4 text-foreground/80">
+                  <p className="hover:text-teal cursor-pointer transition-colors leading-tight">The Cognitive Engine</p>
+                  <p className="hover:text-teal cursor-pointer transition-colors pl-4 leading-tight">1. Memory and State</p>
+                  <p className="hover:text-teal cursor-pointer transition-colors pl-4 leading-tight">2. Tool Usage</p>
                 </div>
              </div>
           </div>

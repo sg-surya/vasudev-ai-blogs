@@ -16,22 +16,27 @@
   --color-ink: #1F2633;
   --color-ink-light: #2A3342;
   
-  --color-background: var(--color-sand);
-  --color-foreground: var(--color-ink);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
 }
 
 @layer base {
   :root {
-    --background: #ffffff;
+    --background: #F3EDE1;
     --foreground: #1F2633;
     
-    --card: #f9fbfb;
+    --card: #ffffff;
     --card-foreground: #1F2633;
     
     --muted: #E8F3F1;
     --muted-foreground: #6b7280;
 
-    --border: #E8F3F1;
+    --border: #D6DBDE;
   }
   
   .dark {
@@ -48,10 +53,32 @@
   }
 
   body {
-    @apply bg-[var(--background)] text-[var(--foreground)] font-sans antialiased selection:bg-teal selection:text-white transition-colors duration-300;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+
+  .prose {
+    --tw-prose-body: var(--foreground);
+    --tw-prose-headings: var(--foreground);
+    --tw-prose-lead: var(--muted-foreground);
+    --tw-prose-links: var(--color-teal);
+    --tw-prose-bold: var(--foreground);
+    --tw-prose-counters: var(--muted-foreground);
+    --tw-prose-bullets: var(--muted-foreground);
+    --tw-prose-hr: var(--border);
+    --tw-prose-quotes: var(--foreground);
+    --tw-prose-quote-borders: var(--color-teal);
+    --tw-prose-captions: var(--muted-foreground);
+    --tw-prose-code: var(--color-teal);
+    --tw-prose-pre-code: var(--foreground);
+    --tw-prose-pre-bg: var(--card);
+    --tw-prose-th-borders: var(--border);
+    --tw-prose-td-borders: var(--border);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight;
+    font-family: var(--font-serif);
+    letter-spacing: -0.025em;
   }
 }
