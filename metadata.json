@@ -1,0 +1,6 @@
+{
+  "name": "Vasudev AI Chronicles",
+  "description": "A premium futuristic developer journal built for the next generation of AI creators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
