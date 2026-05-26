@@ -9,17 +9,17 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   metadataBase: new URL('https://blog.vasudevai.in'),
   title: {
-    default: "Surya AI Chronicles",
-    template: "%s | Surya AI Chronicles"
+    default: "Vasudev AI Chronicles",
+    template: "%s | Vasudev AI Chronicles"
   },
   description: "A premium futuristic developer journal built for the next generation of AI creators. Exploring Artificial Intelligence, Advanced Automation, and the bleeding edge of software engineering.",
   keywords: ["AI Tutorials", "Android Customization", "Automation", "Developer Insights", "Cybersecurity", "Performance Optimization"],
   authors: [{ name: "Surya Pratap Singh" }],
   openGraph: {
-    title: "Surya AI Chronicles",
+    title: "Vasudev AI Chronicles",
     description: "Clarity in Code. Stories in Tech.",
     url: "https://blog.vasudevai.in",
-    siteName: "Surya AI Chronicles",
+    siteName: "Vasudev AI Chronicles",
     locale: "en_US",
     type: "website",
   },

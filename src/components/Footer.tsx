@@ -15,9 +15,9 @@ export function Footer() {
           <div className="md:col-span-1 lg:col-span-1">
             <Link href="/" className="text-xl font-serif font-semibold tracking-tight flex items-center gap-2 mb-4 group">
               <span className="w-8 h-8 rounded-lg bg-teal flex items-center justify-center text-white font-sans font-bold shadow-sm group-hover:bg-lavender transition-colors">
-                S
+                V
               </span>
-              Surya AI
+              Vasudev AI
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Clarity in Code. Stories in Tech. A premium futuristic developer journal built for the next generation of AI creators.
@@ -108,7 +108,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Surya AI Chronicles. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Vasudev AI Chronicles. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <span>Built with Next.js</span>
             <span>·</span>
