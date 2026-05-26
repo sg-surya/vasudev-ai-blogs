@@ -20,7 +20,7 @@ export interface Post {
 }
 
 const AUTHOR_VASUDEV: Author = {
-  name: "Vasudev",
+  name: "Surya Pratap Singh",
   avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop",
   role: "AI Engineer & Founder"
 };

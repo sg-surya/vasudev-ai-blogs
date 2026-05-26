@@ -48,9 +48,9 @@ export function Navbar() {
             className="text-xl md:text-2xl font-serif font-semibold tracking-tight shrink-0 flex items-center gap-2 group"
           >
             <span className="w-8 h-8 rounded-lg bg-teal flex items-center justify-center text-white font-sans font-bold shadow-sm group-hover:bg-lavender transition-colors">
-              V
+              S
             </span>
-            Vasudev AI
+            Surya AI
           </Link>
 
           {/* Desktop Nav */}

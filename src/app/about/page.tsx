@@ -8,7 +8,7 @@ export default function About() {
           Architecting Intelligence.
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          I am Vasudev, an AI Engineer and security researcher exploring the boundaries of autonomous agents and zero-trust infrastructure.
+          I am Surya Pratap Singh, an AI Engineer and security researcher exploring the boundaries of autonomous agents and zero-trust infrastructure.
         </p>
       </div>
 
@@ -23,9 +23,9 @@ export default function About() {
       <div className="grid md:grid-cols-2 gap-16 mb-20">
         <div>
           <h2 className="text-3xl font-serif font-bold mb-6">The Mission</h2>
-          <div className="prose dark:prose-invert text-muted-foreground prose-p:leading-relaxed">
+          <div className="prose text-muted-foreground prose-p:leading-relaxed">
             <p>
-              Vasudev AI Chronicles is a documentation protocol. It serves as a public ledger of my experiments, failures, and breakthroughs in building the next generation of artificial intelligence.
+              Surya AI Chronicles is a documentation protocol. It serves as a public ledger of my experiments, failures, and breakthroughs in building the next generation of artificial intelligence.
             </p>
             <p>
               My work spans across customizing Android kernels for absolute security, deploying autonomous multi-agent systems using modern LLMs, and breaking legacy web applications to understand their flaws.

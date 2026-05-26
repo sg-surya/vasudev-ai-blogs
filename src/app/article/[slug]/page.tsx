@@ -115,12 +115,12 @@ export default function Article() {
                   </span>
                 ))}
               </div>
-              <h1 className="text-4xl md:text-[3.5rem] font-serif font-bold tracking-tight leading-[1.1]">
+              <h1 className="text-4xl md:text-[3.5rem] font-serif font-bold tracking-tight leading-[1.1] text-foreground">
                 {post.title}
               </h1>
             </div>
 
-            <div className="prose prose-lg dark:prose-invert prose-headings:font-serif prose-headings:tracking-tight prose-a:text-teal prose-a:decoration-teal/30 hover:prose-a:decoration-teal prose-img:rounded-2xl max-w-none">
+            <div className="prose prose-lg prose-headings:font-serif prose-headings:text-foreground prose-headings:tracking-tight prose-a:text-teal prose-a:decoration-teal/30 hover:prose-a:decoration-teal prose-img:rounded-2xl max-w-none">
               <ReactMarkdown
                 components={{
                   code({node, inline, className, children, ...props}: any) {

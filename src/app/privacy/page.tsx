@@ -1,6 +1,6 @@
 export default function Privacy() {
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-20 prose dark:prose-invert prose-headings:font-serif prose-a:text-teal inline-block w-full">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-20 prose prose-headings:font-serif prose-headings:text-foreground prose-a:text-teal inline-block w-full">
       <h1>Privacy Protocol</h1>
       <p>Last updated: {new Date().toLocaleDateString()}</p>
       

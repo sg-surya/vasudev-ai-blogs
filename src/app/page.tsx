@@ -51,7 +51,7 @@ export default function Home() {
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             A premium futuristic developer journal exploring Artificial Intelligence, 
             Advanced Automation, and the bleeding edge of software engineering 
-            by Vasudev.
+            by Surya.
           </p>
         </motion.div>
 
@@ -161,7 +161,7 @@ export default function Home() {
             <div className="flex items-center gap-4 mb-4">
               <img 
                 src={featuredPost.author.avatar} 
-                alt="Vasudev" 
+                alt="Surya" 
                 className="w-16 h-16 rounded-full border-2 border-background shadow-sm"
               />
               <div>
@@ -170,7 +170,7 @@ export default function Home() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              Building intelligent systems, tearing down Android kernels, and documenting the journey of creating Vasudev AI.
+              Building intelligent systems, tearing down Android kernels, and documenting the journey of creating Surya AI.
             </p>
             <Link href="/about" className="text-sm font-medium hover:text-teal underline underline-offset-4 transition-colors">
               Read exact specs →

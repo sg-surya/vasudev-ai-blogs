@@ -6,7 +6,7 @@ export default function HTMLSitemap() {
     { title: "Home", path: "/" },
     { title: "Articles Archive", path: "/articles" },
     { title: "Categories", path: "/categories" },
-    { title: "About Vasudev", path: "/about" },
+    { title: "About Surya", path: "/about" },
     { title: "Contact", path: "/contact" },
   ];
 
@@ -22,7 +22,7 @@ export default function HTMLSitemap() {
         HTML Sitemap
       </h1>
       <p className="text-muted-foreground mb-12 text-lg">
-        An overview of the complete architecture and available nodes on Vasudev AI Chronicles.
+        An overview of the complete architecture and available nodes on Surya AI Chronicles.
       </p>
 
       <div className="grid md:grid-cols-2 gap-12">
