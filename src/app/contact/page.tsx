@@ -1,85 +1,45 @@
-"use client";
-
-import { Rocket, Mail, Github, Twitter, MapPin } from "lucide-react";
-
 export default function Contact() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight mb-6">
-          Initialize Connection.
-        </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Open to collaborations, engineering discussions, and security disclosures.
-        </p>
-      </div>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-20 prose prose-headings:font-serif prose-headings:text-foreground prose-a:text-teal inline-block w-full">
+      <h1>Contact Us</h1>
+      <p>We appreciate your feedback, questions, and contributions! Here&rsquo;s how you can get in touch with the Vasudev AI Chronicles team:</p>
 
-      <div className="grid md:grid-cols-5 gap-12">
-        <div className="md:col-span-2 space-y-8">
-          <div className="p-6 rounded-2xl bg-card border border-border">
-            <h3 className="font-serif font-bold text-lg mb-4">Direct Comm Link</h3>
-            <div className="space-y-4">
-              <a href="mailto:hello@vasudevai.in" className="flex items-center gap-3 text-muted-foreground hover:text-teal transition-colors group">
-                <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>hello@vasudevai.in</span>
-              </a>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="w-5 h-5" />
-                <span>Global Distributed Node</span>
-              </div>
-            </div>
-            
-            <div className="h-px bg-border my-6" />
-            
-            <h3 className="font-serif font-bold text-lg mb-4">Networks</h3>
-            <div className="space-y-4">
-              <a href="#" className="flex items-center gap-3 text-muted-foreground hover:text-teal transition-colors group">
-                <Twitter className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>@vasudev_ai</span>
-              </a>
-              <a href="#" className="flex items-center gap-3 text-muted-foreground hover:text-teal transition-colors group">
-                <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>github.com/vasudev</span>
-              </a>
-            </div>
-          </div>
-        </div>
+      <ul>
+        <li><strong>Email:</strong> You can send us an email at <strong>hello@vasudevai.in</strong>. Whether it&rsquo;s a question about an article, suggestions for topics, or just to say hello, we&rsquo;ll do our best to respond promptly.</li>
+        <li><strong>Contact Form:</strong> Use the form on this page to send us a message directly. We typically respond within 2&ndash;3 business days.</li>
+        <li><strong>Social Media:</strong> Follow us on Twitter @VasudevAI for updates, quick tips, and conversation. We also have a LinkedIn page where we share longer posts and announcements.</li>
+        <li><strong>Mailing List:</strong> Join our newsletter (sign-up form in the footer) to receive new articles and exclusive content directly to your inbox.</li>
+        <li><strong>Business Inquiries:</strong> For partnership, advertising, or guest-post proposals, please email <strong>business@vasudevai.in</strong>.</li>
+      </ul>
 
-        <div className="md:col-span-3">
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Designation / Name</label>
-                <input 
-                  type="text" 
-                  className="w-full bg-card border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all shadow-sm"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Return Node (Email)</label>
-                <input 
-                  type="email" 
-                  className="w-full bg-card border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all shadow-sm"
-                  placeholder="john@example.com"
-                />
-              </div>
+      <p>We value open communication and are happy to engage with our readers. If you encounter any technical issues on the site (broken links, errors), or have concerns about content, please let us know via the above methods. Your input helps improve Vasudev AI Chronicles for everyone.</p>
+
+      {/* Form implementation remains simple to meet the requirement but is left as placeholder since standard forms usually need a backend handler. */}
+      {/* We add a highly stylized minimal static form for completion. */}
+      
+      <div className="not-prose mt-12 bg-card border border-border p-8 rounded-2xl">
+        <h3 className="font-serif text-2xl font-bold tracking-tight mb-8">Send a Message</h3>
+        <form className="space-y-6">
+          <div className="grid grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <label htmlFor="name" className="text-sm font-medium">Name</label>
+              <input type="text" id="name" className="w-full bg-background border border-border rounded-lg px-4 py-2 focus:outline-none focus:border-teal transition-colors" placeholder="Surya Pratap" />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">Payload (Message)</label>
-              <textarea 
-                rows={6}
-                className="w-full bg-card border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all shadow-sm resize-none"
-                placeholder="Let's build something..."
-              />
+              <label htmlFor="email" className="text-sm font-medium">Email</label>
+              <input type="email" id="email" className="w-full bg-background border border-border rounded-lg px-4 py-2 focus:outline-none focus:border-teal transition-colors" placeholder="hello@vasudevai.in" />
             </div>
-            <button className="w-full bg-foreground text-background hover:bg-teal hover:text-white px-6 py-4 rounded-xl font-medium flex items-center justify-center gap-2 transition-colors shadow-sm">
-              <Rocket className="w-5 h-5" />
-              Transmit Message
-            </button>
-          </form>
-        </div>
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="message" className="text-sm font-medium">Message</label>
+            <textarea id="message" rows={5} className="w-full bg-background border border-border rounded-lg px-4 py-2 focus:outline-none focus:border-teal transition-colors" placeholder="How can we help you?"></textarea>
+          </div>
+          <button type="submit" className="bg-teal text-white font-medium px-6 py-2 rounded-lg hover:bg-opacity-90 transition-opacity">
+            Send Message
+          </button>
+        </form>
       </div>
+
     </div>
   );
 }

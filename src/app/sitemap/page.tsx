@@ -14,6 +14,7 @@ export default function HTMLSitemap() {
     { title: "Privacy Policy", path: "/privacy" },
     { title: "Terms & Conditions", path: "/terms" },
     { title: "Disclaimer", path: "/disclaimer" },
+    { title: "Cookie Policy", path: "/cookie" },
   ];
 
   return (
