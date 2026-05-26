@@ -1,6 +1,9 @@
+"use client";
+
 import { Moon, Sun, Search, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTheme } from "./ThemeProvider";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
@@ -16,7 +19,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +43,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link
-            to="/"
+            href="/"
             onClick={closeMenu}
             className="text-xl md:text-2xl font-serif font-semibold tracking-tight shrink-0 flex items-center gap-2 group"
           >
@@ -55,16 +58,16 @@ export function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                to={link.path}
+                href={link.path}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-teal relative",
-                  location.pathname === link.path
+                  pathname === link.path
                     ? "text-teal"
                     : "text-foreground/80 hover:text-foreground"
                 )}
               >
                 {link.name}
-                {location.pathname === link.path && (
+                {pathname === link.path && (
                   <motion.div
                     layoutId="navbar-indicator"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-teal rounded-full"
@@ -121,11 +124,11 @@ export function Navbar() {
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
-                  to={link.path}
+                  href={link.path}
                   onClick={closeMenu}
                   className={cn(
                     "text-lg font-medium px-4 py-2 rounded-lg transition-colors",
-                    location.pathname === link.path
+                    pathname === link.path
                       ? "bg-muted text-teal"
                       : "text-foreground/80 hover:bg-muted hover:text-foreground"
                   )}

@@ -1,4 +1,7 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+"use client";
+
+import { useParams, notFound } from "next/navigation";
+import Link from "next/link";
 import { posts } from "@/data/posts";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -8,7 +11,7 @@ import { motion, useScroll, useSpring } from "motion/react";
 import { ArrowLeft, Clock, CalendarDays, Share2, BookmarkPlus } from "lucide-react";
 import { useState, useEffect } from "react";
 
-export function Article() {
+export default function Article() {
   const { slug } = useParams<{ slug: string }>();
   const post = posts.find(p => p.slug === slug);
   const { scrollYProgress } = useScroll();
@@ -25,7 +28,7 @@ export function Article() {
   }, []);
 
   if (!post) {
-    return <Navigate to="/404" replace />;
+    return notFound();
   }
 
   const handleCopyLink = () => {
@@ -42,7 +45,7 @@ export function Article() {
       />
       
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
-        <Link to="/articles" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-teal mb-8 transition-colors group">
+        <Link href="/articles" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-teal mb-8 transition-colors group">
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Back to Archive
         </Link>

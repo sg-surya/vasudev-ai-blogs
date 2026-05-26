@@ -1,12 +1,23 @@
+"use client";
+
 import { categories, posts } from "@/data/posts";
-import { Link, useSearchParams } from "react-router-dom";
+import Link from "next/link";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import { format } from "date-fns";
 import { motion } from "motion/react";
 
-export function Categories() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const activeCategory = searchParams.get("q") || "All";
+import { Suspense } from "react";
+
+function CategoriesContent() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const activeCategory = searchParams?.get("q") || "All";
+  
+  const handleSetSearchParams = (params: any) => {
+    if (params.q) router.push(`?q=${params.q}`);
+    else router.push('?');
+  };
 
   const filteredPosts = activeCategory === "All" 
     ? posts 
@@ -25,7 +36,7 @@ export function Categories() {
 
       <div className="flex flex-wrap justify-center gap-3 mb-16">
         <button
-          onClick={() => setSearchParams({})}
+          onClick={() => handleSetSearchParams({})}
           className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm border ${
             activeCategory === "All" 
               ? "bg-foreground text-background border-foreground" 
@@ -37,7 +48,7 @@ export function Categories() {
         {categories.map(cat => (
           <button
             key={cat}
-            onClick={() => setSearchParams({ q: cat })}
+            onClick={() => handleSetSearchParams({ q: cat })}
             className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm border ${
               activeCategory === cat 
                 ? "bg-foreground text-background border-foreground" 
@@ -58,7 +69,7 @@ export function Categories() {
             transition={{ delay: i * 0.05 }}
             className="group flex flex-col bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:border-teal/30 relative"
           >
-            <Link to={`/article/${post.slug}`} className="absolute inset-0 z-10" />
+            <Link href={`/article/${post.slug}`} className="absolute inset-0 z-10" />
             <div className="flex flex-col flex-grow p-6">
               <span className="text-xs font-semibold tracking-wider uppercase text-teal mb-4 block">
                 {post.category}
@@ -84,5 +95,13 @@ export function Categories() {
          </div>
       )}
     </div>
+  );
+}
+
+export default function Categories() {
+  return (
+    <Suspense fallback={<div className="p-24 text-center text-muted-foreground">Loading specific sector...</div>}>
+      <CategoriesContent />
+    </Suspense>
   );
 }

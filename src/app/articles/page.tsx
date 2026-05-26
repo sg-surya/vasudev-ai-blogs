@@ -1,11 +1,13 @@
+"use client";
+
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Search } from "lucide-react";
 import { posts } from "@/data/posts";
 import { format } from "date-fns";
 import { useState } from "react";
 
-export function Articles() {
+export default function Articles() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredPosts = posts.filter(post => 
@@ -44,7 +46,7 @@ export function Articles() {
             transition={{ delay: i * 0.1 }}
             className="group flex flex-col bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:border-teal/30 relative"
           >
-            <Link to={`/article/${post.slug}`} className="absolute inset-0 z-10" aria-label={post.title} />
+            <Link href={`/article/${post.slug}`} className="absolute inset-0 z-10" aria-label={post.title} />
             <div className="aspect-[16/10] overflow-hidden">
               <img 
                 src={post.coverImage} 

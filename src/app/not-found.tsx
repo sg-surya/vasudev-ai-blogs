@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Terminal } from "lucide-react";
 
-export function NotFound() {
+export default function NotFound() {
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center px-4 text-center">
       <div className="w-16 h-16 rounded-2xl bg-teal/10 flex items-center justify-center text-teal mb-6 border border-teal/20">
@@ -17,7 +17,7 @@ export function NotFound() {
         The node you are trying to reach has either been disconnected from the cluster or never existed.
       </p>
       <Link 
-        to="/"
+        href="/"
         className="px-6 py-3 bg-foreground text-background rounded-full font-medium hover:bg-teal hover:text-white transition-colors"
       >
         Return to Core

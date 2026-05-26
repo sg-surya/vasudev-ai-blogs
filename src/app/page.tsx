@@ -1,5 +1,7 @@
+"use client";
+
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight, Code, Cpu, Shield, Smartphone } from "lucide-react";
 import { posts, categories } from "@/data/posts";
 import { format } from "date-fns";
@@ -25,7 +27,7 @@ const itemVariants = {
   }
 };
 
-export function Home() {
+export default function Home() {
   const featuredPost = posts.find(p => p.featured) || posts[0];
   const recentPosts = posts.filter(p => p.id !== featuredPost.id).slice(0, 4);
 
@@ -55,7 +57,7 @@ export function Home() {
 
         {/* Featured Post Card */}
         <motion.div variants={itemVariants}>
-          <Link to={`/article/${featuredPost.slug}`} className="group block">
+          <Link href={`/article/${featuredPost.slug}`} className="group block">
             <div className="relative rounded-3xl overflow-hidden border border-border bg-card shadow-sm transition-all hover:shadow-xl hover:border-teal/30">
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent z-10" />
               <div className="aspect-[21/9] md:aspect-[24/9] overflow-hidden">
@@ -107,7 +109,7 @@ export function Home() {
         <section className="lg:col-span-8">
           <div className="flex items-center border-b border-border pb-4 mb-8">
             <h2 className="text-2xl font-serif font-bold tracking-tight">Latest Notes</h2>
-            <Link to="/articles" className="ml-auto text-sm text-teal hover:text-lavender font-medium flex items-center gap-1 transition-colors">
+            <Link href="/articles" className="ml-auto text-sm text-teal hover:text-lavender font-medium flex items-center gap-1 transition-colors">
               View all <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -132,7 +134,7 @@ export function Home() {
                   <span className="text-xs font-semibold tracking-wider uppercase text-teal mb-2">
                     {post.category}
                   </span>
-                  <Link to={`/article/${post.slug}`} className="absolute inset-0 z-10" aria-label={post.title} />
+                  <Link href={`/article/${post.slug}`} className="absolute inset-0 z-10" aria-label={post.title} />
                   <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 group-hover:text-teal transition-colors">
                     {post.title}
                   </h3>
@@ -170,7 +172,7 @@ export function Home() {
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
               Building intelligent systems, tearing down Android kernels, and documenting the journey of creating Vasudev AI.
             </p>
-            <Link to="/about" className="text-sm font-medium hover:text-teal underline underline-offset-4 transition-colors">
+            <Link href="/about" className="text-sm font-medium hover:text-teal underline underline-offset-4 transition-colors">
               Read exact specs →
             </Link>
           </div>
@@ -182,7 +184,7 @@ export function Home() {
               {categories.map((cat, i) => (
                 <Link 
                   key={cat} 
-                  to={`/categories?q=${encodeURIComponent(cat)}`}
+                  href={`/categories?q=${encodeURIComponent(cat)}`}
                   className="px-3 py-1.5 text-sm font-medium bg-muted hover:bg-teal hover:text-white rounded-lg transition-colors border border-border/50"
                 >
                   {cat}
