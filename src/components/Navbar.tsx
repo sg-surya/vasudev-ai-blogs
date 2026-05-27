@@ -3,7 +3,7 @@
 import { Moon, Sun, Search, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "./ThemeProvider";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
@@ -18,8 +18,10 @@ const navLinks = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const { theme, setTheme } = useTheme();
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +32,14 @@ export function Navbar() {
   }, []);
 
   const closeMenu = () => setMobileMenuOpen(false);
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/articles?q=${encodeURIComponent(searchQuery.trim())}`);
+      closeMenu();
+    }
+  };
 
   return (
     <header
@@ -80,12 +90,13 @@ export function Navbar() {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <button
+            <Link
+              href="/articles"
               className="p-2 text-foreground/80 hover:text-foreground hover:bg-muted rounded-full transition-colors hidden md:block"
               aria-label="Search"
             >
               <Search className="w-5 h-5" />
-            </button>
+            </Link>
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 text-foreground/80 hover:text-foreground hover:bg-muted rounded-full transition-colors"
@@ -137,14 +148,18 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="px-4 py-2 pt-4 border-t border-border">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                  <input
-                    type="text"
-                    placeholder="Search articles..."
-                    className="w-full pl-10 pr-4 py-2 bg-muted rounded-lg outline-none focus:ring-2 focus:ring-teal/50 text-sm"
-                  />
-                </div>
+                <form onSubmit={handleSearchSubmit}>
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                    <input
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Search articles..."
+                      className="w-full pl-10 pr-4 py-2 bg-muted rounded-lg outline-none focus:ring-2 focus:ring-teal/50 text-sm"
+                    />
+                  </div>
+                </form>
               </div>
             </nav>
           </motion.div>

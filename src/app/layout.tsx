@@ -2,7 +2,7 @@ import "@/index.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import Script from "next/script";
+import { CookieConsent } from "@/components/CookieConsent";
 
 import type { Metadata } from 'next';
 
@@ -43,18 +43,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYSXREVNXX"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-GYSXREVNXX');
-          `
-        }} />
-      </head>
       <body>
         <ThemeProvider defaultTheme="system" storageKey="vasudev-ui-theme">
           <div className="min-h-screen flex flex-col font-sans text-foreground bg-background selection:bg-teal selection:text-white transition-colors duration-300">
@@ -65,6 +53,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <CookieConsent />
       </body>
     </html>
   );

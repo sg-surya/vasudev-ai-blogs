@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Twitter, Linkedin, ArrowRight, Sun, Moon, Laptop } from "lucide-react";
+import { Github, Linkedin, MessageCircle, ArrowRight, Sun, Moon, Laptop } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { cn } from "@/lib/utils";
 
@@ -23,14 +23,14 @@ export function Footer() {
               Clarity in Code. Stories in Tech. A premium futuristic developer journal built for the next generation of AI creators.
             </p>
             <div className="flex items-center gap-4 mt-6">
-              <a href="#" className="text-muted-foreground hover:text-teal transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-teal transition-colors">
+              <a href="https://github.com/Vasudev-ai" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-teal transition-colors" aria-label="GitHub">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-teal transition-colors">
+              <a href="https://www.linkedin.com/company/vasudev-ai/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-teal transition-colors" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://discord.gg/e5uPQDXSSk" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-teal transition-colors" aria-label="Discord">
+                <MessageCircle className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -58,25 +58,17 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-1 border border-border p-6 rounded-2xl bg-card">
-            <h3 className="font-semibold mb-2 font-serif text-lg">Newsletter</h3>
+            <h3 className="font-semibold mb-2 font-serif text-lg">Get in Touch</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Get the latest tech experiments and AI insights in your inbox.
+              Have a question or collaboration idea? Reach out directly.
             </p>
-            <form className="flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="developer@example.com"
-                className="bg-background border border-border rounded-lg px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all"
-                required
-              />
-              <button 
-                type="submit"
-                className="bg-foreground text-background hover:bg-teal hover:text-white px-4 py-2.5 rounded-lg text-sm font-medium flex items-center justify-center gap-2 transition-colors"
-              >
-                Subscribe
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </form>
+            <Link
+              href="/contact"
+              className="bg-foreground text-background hover:bg-teal hover:text-white px-4 py-2.5 rounded-lg text-sm font-medium flex items-center justify-center gap-2 transition-colors"
+            >
+              Contact Us
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
 

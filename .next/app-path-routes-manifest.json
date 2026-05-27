@@ -2,6 +2,7 @@
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/about/page": "/about",
+  "/api/contact/route": "/api/contact",
   "/article/[slug]/page": "/article/[slug]",
   "/articles/page": "/articles",
   "/categories/page": "/categories",

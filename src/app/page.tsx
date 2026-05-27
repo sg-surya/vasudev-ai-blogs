@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight, ShieldCheck, Cpu, Database, Mail } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { posts, categories } from "@/data/posts";
 import { format } from "date-fns";
 
@@ -300,26 +300,6 @@ export default function Home() {
         </div>
 
       </section>
-
-      {/* 3. ADDITIONAL INSIGHTS & NEWSLETTER ROW */}
-      <footer className="w-full bg-[#fcf9f2] dark:bg-card/40 border border-border rounded-[2.5rem] p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center justify-between shadow-sm mt-8">
-        <div className="flex flex-col gap-2 max-w-xl text-center md:text-left">
-          <h3 className="font-serif text-2xl font-black text-foreground">Subscribe to Surya's Dispatch</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Receive high-signal insights on agentic system architectures and zero-trust security directly to your inbox. No tracking or algorithmic spam.
-          </p>
-        </div>
-        <form className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0" onSubmit={(e) => e.preventDefault()}>
-          <input 
-            type="email" 
-            placeholder="Enter private email" 
-            className="bg-background border border-border rounded-full px-5 py-3 text-xs w-full sm:w-[280px] focus:outline-none focus:border-teal transition-colors shadow-sm" 
-          />
-          <button className="bg-foreground text-background text-xs font-bold px-6 py-3 rounded-full hover:bg-foreground/90 active:scale-95 transition-all shadow-sm shrink-0">
-            Join the protocol
-          </button>
-        </form>
-      </footer>
 
     </div>
   );

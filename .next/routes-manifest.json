@@ -57,6 +57,12 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
+      "page": "/api/contact",
+      "regex": "^/api/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/contact(?:/)?$"
+    },
+    {
       "page": "/articles",
       "regex": "^/articles(?:/)?$",
       "routeKeys": {},
