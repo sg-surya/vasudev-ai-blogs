@@ -1,9 +1,47 @@
+# dependencies
 node_modules/
+
+# next.js
+.next/
+out/
+
+# production
 build/
 dist/
-coverage/
+
+# typescript
+*.tsbuildinfo
+
+# misc
 .DS_Store
 *.log
+*.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# env files (keep .env.example)
 .env*
 !.env.example
-.next/
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+
+# testing
+coverage/
+
+# vercel
+.vercel
+
+# turbo
+.turbo
