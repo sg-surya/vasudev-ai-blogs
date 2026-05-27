@@ -2,6 +2,31 @@
 
 All notable changes to Vasudev AI Chronicles will be documented here.
 
+## 2026-05-27 — Phase 2: 15 New In-Depth AI Articles
+
+### Added
+- **15 new articles** covering the latest AI developments in 2026:
+  - `claude-4-opus-2026` — Claude 4 Opus features, coding benchmarks vs GPT-5
+  - `openai-gpt5-o3-o4-2026` — GPT-5, o3/o4 reasoning models, OpenAI Dev Day 2026
+  - `open-source-ai-agents-2026` — AutoGPT, CrewAI, LangGraph, Swarm comparison
+  - `google-io-2026-ai-recap` — Gemini 2.0 Pro, Project Mariner, Gemma 3, Veo 3
+  - `ai-coding-assistants-2026-comparison` — Cursor vs Copilot vs Windsurf vs Codeium
+  - `local-llms-2026-llama4-mistral` — Llama 4, Mistral Large 2, Phi-4 on consumer hardware
+  - `multi-agent-systems-langgraph-claude` — Building multi-agent systems with LangGraph + Claude
+  - `rag-production-2026-best-practices` — ColBERT v2, hybrid search, reranking, RAGAS
+  - `open-source-vs-closed-source-llms-2026` — Cost, performance, and use case analysis
+  - `fine-tuning-llama4-mistral-2026` — LoRA, QLoRA, DoRA fine-tuning guide
+  - `ai-hardware-2026-rtx5090-m4-ultra` — RTX 5090, M4 Ultra, NPUs for AI workloads
+  - `model-context-protocol-mcp-2026` — MCP protocol, building MCP servers, ecosystem
+  - `ai-in-vs-code-2026` — Copilot Agent Mode, Cursor rules, AI extensions
+  - `multimodal-ai-2026-sora-veo` — Sora, Veo 3, DALL-E 4, Stable Diffusion 4
+  - `open-source-ai-news-2026` — New models, leaderboards, MoE architectures
+
+### Changed
+- Updated `src/data/posts/index.ts` to register all 15 new articles
+
+---
+
 ## 2026-05-27 — Phase 0: SEO Blocker Fix
 
 ### Changed
