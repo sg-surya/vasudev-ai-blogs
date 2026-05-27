@@ -260,7 +260,7 @@ scores = evaluate(
 
 RAG in 2026 is a solved engineering problem — but only if you get the details right. Use ColBERT v2 for embedding, hybrid search for retrieval, cross-encoders for reranking, and RAGAS for evaluation. Skip any of these components and your system will underperform. Implement all of them, and you will have a production-grade RAG pipeline that users trust.
   `,
-  coverImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-27",
   readingTime: "15 min read",
   category: "Artificial Intelligence",

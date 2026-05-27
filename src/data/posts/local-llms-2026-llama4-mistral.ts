@@ -200,7 +200,7 @@ Quantization reduces model size with minimal quality loss:
 
 In 2026, local LLMs are viable for everyone. If you have a gaming PC (RTX 3060+), you can run Phi-4 or Llama 4 Scout with good quality and speed. If you have a workstation, Mistral Large 2 at 4-bit rivals cloud models. And with Ollama and LM Studio, setup takes minutes. There has never been a better time to run AI locally.
   `,
-  coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-27",
   readingTime: "14 min read",
   category: "Artificial Intelligence",

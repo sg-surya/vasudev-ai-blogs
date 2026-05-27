@@ -42,7 +42,7 @@ export default function Home() {
   const rightBottomCard2 = posts.find((p) => p.id === "13") || posts[12]; // "How I Built Vasudev AI"
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 flex flex-col gap-12 font-sans selection:bg-teal selection:text-white">
+    <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 flex flex-col gap-12 font-sans selection:bg-teal selection:text-white">
       
       {/* 1. UPPER MAGAZINE CONTAINER (Hero Block) */}
       <motion.section

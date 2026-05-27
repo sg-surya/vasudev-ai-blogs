@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Articles() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
       <div className="max-w-3xl mb-12">
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground tracking-tight mb-6">
           The Archive
