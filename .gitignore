@@ -45,3 +45,5 @@ coverage/
 
 # turbo
 .turbo
+
+.next/dev/
