@@ -194,7 +194,7 @@ The right extensions turn VS Code from a text editor into an AI development cock
 
 Your editor should accelerate your work, not fight it. These ten extensions do exactly that.
   `,
-  coverImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-20",
   readingTime: "10 min read",
   category: "Developer Tools",

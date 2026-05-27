@@ -98,8 +98,8 @@ jobs:
       - name: AI Review
         run: |
           curl -X POST https://your-app.com/api/review \\
-            -H "Authorization: Bearer \x24{{ secrets.GITHUB_TOKEN }}" \\
-            -d '{"pr_number": \x24{{ github.event.pull_request.number }}}'
+            -H "Authorization: Bearer YOUR_GITHUB_TOKEN" \\
+            -d '{"pr_number": PR_NUMBER}'
 \`\`\`
 
 The server-side handler fetches the PR diff, sends it to the LLM, and posts review comments:
@@ -330,7 +330,7 @@ AI agents are transforming GitHub workflows from static scripts into intelligent
 
 Next steps: Deploy the PR review agent, monitor its accuracy, then add issue triage. Within a week, your team will wonder how they lived without it.
   `,
-  coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-16",
   readingTime: "12 min read",
   category: "Automation",

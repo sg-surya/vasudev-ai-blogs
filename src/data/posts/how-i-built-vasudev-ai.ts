@@ -19,7 +19,7 @@ Utility classes provide a zero-context-switching experience. Paired with a custo
 ## Animations: Framer Motion
 Every micro-interaction (the navbar indicator, page reveals, card hovers) utilizes mathematical spring physics rather than rigid CSS cubic-beziers. 
   `,
-  coverImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=1200&auto=format&fit=crop",
   date: "2026-04-15",
   readingTime: "5 min read",
   category: "Developer Tools",

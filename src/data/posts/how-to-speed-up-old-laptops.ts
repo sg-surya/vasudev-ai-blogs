@@ -19,7 +19,7 @@ Windows demands resources. Installing Linux Mint (XFCE edition) or Google's Chro
 ## 3. Thermal Maintenance
 Processors heavily thermal-throttle when dust builds up. Open the back cover, use compressed air on the fans, and repaste the CPU die with high-quality thermal paste like Arctic MX-4. 
   `,
-  coverImage: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
   date: "2026-04-10",
   readingTime: "5 min read",
   category: "Performance Optimization",

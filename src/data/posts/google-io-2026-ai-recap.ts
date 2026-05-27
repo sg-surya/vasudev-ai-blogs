@@ -212,7 +212,7 @@ Veo 3, Google's latest video generation model, can create:
 
 Google I/O 2026 showed that Google is all-in on AI. Gemini 2.0 Pro is a genuine competitor to GPT-5 and Claude 4 Opus, Gemma 3 brings open-source AI to new heights, and Project Mariner signals Google's ambition in the AI agent space. For developers, the biggest takeaway is the breadth of Google's AI platform — from edge (Gemma 3-2B) to cloud (Gemini 2.0 Pro) — and the deep integration across Android, Chrome, and Google Cloud.
   `,
-  coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-27",
   readingTime: "16 min read",
   category: "Artificial Intelligence",

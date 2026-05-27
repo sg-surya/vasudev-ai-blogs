@@ -27,6 +27,14 @@ dist/
 .env*
 !.env.example
 
+# Windows reserved device names (can be created by Turbopack panics)
+nul
+CON
+PRN
+AUX
+COM1
+LPT1
+
 # IDE
 .vscode/*
 !.vscode/settings.json
@@ -46,4 +54,4 @@ coverage/
 # turbo
 .turbo
 
-.next/dev/
+

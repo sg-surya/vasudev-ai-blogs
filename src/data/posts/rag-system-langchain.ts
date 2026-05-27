@@ -515,7 +515,7 @@ The key takeaway is this: RAG is not a single technique but a spectrum of choice
 
 LangChain and ChromaDB give you the building blocks. Now go build something that makes your LLM actually useful with your own data.
   `,
-  coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-20",
   readingTime: "15 min read",
   category: "Artificial Intelligence",

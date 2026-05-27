@@ -140,7 +140,7 @@ Claude 4 Opus is, as of May 2026, the best model for coding and agentic tasks. A
 
 The gap between Anthropic and OpenAI is narrowing — and on several critical axes, Anthropic has pulled ahead.
   `,
-  coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-27",
   readingTime: "14 min read",
   category: "Artificial Intelligence",

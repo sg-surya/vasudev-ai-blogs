@@ -276,7 +276,7 @@ print(f"HumanEval: {results['results']['human_eval']['pass@1']}")
 
 Fine-tuning in 2026 is accessible to anyone with a gaming GPU. Using QLoRA + Unsloth, you can fine-tune Llama 4 Scout on an RTX 4090 in 3-6 hours. The key is high-quality data and the right hyperparameters. Start small (500 examples, rank 16), evaluate thoroughly, and iterate. DoRA is the emerging best practice — it matches full fine-tuning quality at QLoRA-level memory costs.
   `,
-  coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-27",
   readingTime: "14 min read",
   category: "Tutorial",

@@ -213,7 +213,7 @@ At current trajectory, open-source models will equal closed-source on most bench
 
 In 2026, the question is not "open-source or closed-source" but "which model for which task." Open-source is now good enough for 80% of use cases — and dramatically cheaper. Closed-source still wins on maximum quality, cutting-edge features, and zero ops burden. The smartest approach is hybrid: use open-source for high-volume, privacy-sensitive, and latency-critical paths; use closed-source for complex, quality-sensitive, and feature-dependent tasks.
   `,
-  coverImage: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-27",
   readingTime: "14 min read",
   category: "Artificial Intelligence",

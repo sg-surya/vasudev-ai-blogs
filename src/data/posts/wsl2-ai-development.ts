@@ -273,7 +273,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Hyper-V /all /quiet
 
 WSL2 has eliminated the last remaining reason to dual-boot for AI development. With GPU passthrough, native Linux performance, and seamless VS Code integration, you get a world-class AI development environment without leaving Windows. The setup takes about an hour, and the productivity gains are enormous.
   `,
-  coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-20",
   readingTime: "12 min read",
   category: "Developer Tools",

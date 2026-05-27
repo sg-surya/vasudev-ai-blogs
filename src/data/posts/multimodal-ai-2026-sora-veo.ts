@@ -267,7 +267,7 @@ image.save('monastery.png')
 
 Multimodal AI in 2026 is remarkable. Sora and Veo 3 produce video that was indistinguishable from professional footage in blind tests. DALL-E 4 and SD4 generate images that rival stock photography. The gap between open-source (SD4) and closed-source (DALL-E 4) is narrowing. For most practical applications, SD4 is good enough and free. For professional-grade output requiring consistency and typography, DALL-E 4 leads. For video, Sora edges out Veo 3 on quality, but Veo 3 wins on language support and watermarking.
   `,
-  coverImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-27",
   readingTime: "15 min read",
   category: "Artificial Intelligence",

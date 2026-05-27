@@ -226,7 +226,7 @@ curl http://localhost:11434/v1/chat/completions \\
 
 If you have the RAM, Llama 3 provides a more robust conversational and coding experience. If you are building background agents, running hardware-constrained devices, or serving high-throughput pipelines, Phi-3 is unmatched. The real answer? Deploy both.
   `,
-  coverImage: "https://images.unsplash.com/photo-1681412328122-8bf8828b8123?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-18",
   readingTime: "10 min read",
   category: "Artificial Intelligence",

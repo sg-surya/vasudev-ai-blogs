@@ -192,7 +192,7 @@ After debloating, my Windows 11 development machine runs:
 
 The Chris Titus Utility is the safest starting point. Run it, disable SysMain and telemetry services, remove the UWP apps you never use, and reclaim 2 GB of RAM for your containers and compilers.
   `,
-  coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=1200&auto=format&fit=crop",
   date: "2026-05-08",
   readingTime: "7 min read",
   category: "Performance Optimization",

@@ -298,7 +298,7 @@ Building a local ChatGPT clone with Next.js and LM Studio is surprisingly simple
 
 The best part? As models improve, you just download a new GGUF file—no code changes needed. Your ChatGPT clone evolves with the open-source ecosystem.
   `,
-  coverImage: "https://images.unsplash.com/photo-1531297180773-4b07fb1b6370?q=80&w=1200&auto=format&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1618401471353-b98a520d9c1a?q=80&w=1200&auto=format&fit=crop",
   date: "2026-04-20",
   readingTime: "12 min read",
   category: "Artificial Intelligence",
